@@ -1,0 +1,139 @@
+@import '../../assets/scss/variables';
+
+header {
+  .container {
+    min-height: 100vh;
+
+    .pic {
+      position: absolute;
+      bottom: 0;
+      left: 10vw;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .name__sosmed {
+      width: 100%;
+      margin-right: 200px;
+
+      hr {
+        margin: 20px 0;
+        height: 10px;
+        width: 70px;
+        border: none;
+        background-color: $clr-accent;
+      }
+      .icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $clr-white;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 50%;
+        color: $clr-white;
+        font-size: 18px;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+          color: $clr-accent;
+          border-color: $clr-accent;
+        }
+      }
+    }
+
+    .description {
+      z-index: 1;
+      width: 100%;
+      max-width: 580px;
+      margin-top: 250px;
+
+      .job {
+        margin: 20px 0;
+      }
+
+      p {
+        span {
+          color: $clr-accent;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-ipadPro) {
+  header {
+    .container {
+      .pic {
+        max-width: 1000px;
+        left: -25vw;
+      }
+
+      .name__sosmed {
+        margin: 0;
+        margin-bottom: 400px;
+
+        hr {
+          height: 7px;
+          width: 30px;
+        }
+      }
+
+      .description {
+        margin-top: 500px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-ipadPro) and (max-height: $breakpoint-ipad) {
+  header {
+    .container {
+      .pic {
+        max-width: 500px;
+        left: 0;
+      }
+
+      .name__sosmed {
+        margin: 0;
+        margin-bottom: 200px;
+      }
+
+      .description {
+        margin-top: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  header {
+    .container {
+      width: 90vw;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding: 50px 0;
+
+      .pic {
+        position: unset;
+        max-width: 200px;
+        // left: -18vw;
+        border-bottom: 7px solid $clr-accent;
+      }
+
+      .name__sosmed {
+        margin: 10px 0;
+
+        .icon-container {
+          display: none;
+        }
+      }
+
+      .description {
+        margin: 0;
+      }
+    }
+  }
+}

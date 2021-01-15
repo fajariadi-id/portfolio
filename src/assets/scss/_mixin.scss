@@ -1,0 +1,13 @@
+@import './variables';
+
+@mixin typo($ff, $fz, $lh, $fw: 600, $clr: $clr-white) {
+  font-family: $ff;
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: $fw;
+  color: $clr;
+}
+
+// @mixin sidenav {
+
+// }

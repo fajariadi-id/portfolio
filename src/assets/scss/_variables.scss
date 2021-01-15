@@ -1,0 +1,24 @@
+$ff-primary: 'Poppins', sans-serif;
+$ff-body: 'Roboto', sans-serif;
+$ff-accent: 'Roboto Mono', monospace;
+
+$clr-main-dark: #252734;
+$clr-main-light: #333646;
+$clr-accent: #ffc25c;
+$clr-red: #d81f26;
+$clr-body: #f6f6f480;
+$clr-white: #f6f6f4;
+$clr-black: #333;
+
+$transition: all 0.3s ease;
+$shadow: 0 7px 3px
+  rgba(
+    $color: #111,
+    $alpha: 0.1,
+  );
+
+$radius: 10px;
+
+$breakpoint-ipadPro: 1100px;
+$breakpoint-ipad: 800px;
+$breakpoint-phone: 600px;

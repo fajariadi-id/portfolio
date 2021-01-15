@@ -1,0 +1,147 @@
+@import './mixin';
+@import './variables';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include typo($ff-body, 16px, 1.5, 500, $clr-body);
+  background-color: $clr-main-light;
+}
+
+h1 {
+  @include typo($ff-primary, 64px, 1.1);
+}
+
+h2 {
+  @include typo($ff-primary, 36px, 1.2);
+}
+
+.h2-accent {
+  @include typo($ff-accent, 24px, 1.2, 600, $clr-body);
+}
+
+.h3-accent {
+  @include typo($ff-accent, 18px, 1.3);
+}
+
+.body-accent {
+  @include typo($ff-accent, 16px, 1.4, 600, $clr-body);
+}
+
+.link {
+  @include typo($ff-primary, 18px, 1.4);
+}
+
+// *::: RESPONSIVE TYPOGRAPHY :::
+
+@media (max-width: $breakpoint-ipad) {
+  body {
+    @include typo($ff-body, 14px, 1.5, 500, $clr-body);
+  }
+
+  h1 {
+    @include typo($ff-primary, 36px, 1.1);
+  }
+
+  h2 {
+    @include typo($ff-primary, 24px, 1.2);
+  }
+
+  .h2-accent {
+    @include typo($ff-accent, 18px, 1.2, 600, $clr-body);
+  }
+
+  .h3-accent {
+    @include typo($ff-accent, 16px, 1.3);
+  }
+
+  .body-accent {
+    @include typo($ff-accent, 14px, 1.4, 600, $clr-body);
+  }
+
+  .link {
+    @include typo($ff-primary, 16px, 1.4);
+  }
+}
+
+// @media (max-width: $breakpoint-phone) {
+//   body {
+//     @include typo($ff-body, 12px, 1.5, 500, $clr-body);
+//   }
+
+//   h1 {
+//     @include typo($ff-primary, 24px, 1.1);
+//   }
+
+//   h2 {
+//     @include typo($ff-primary, 18px, 1.2);
+//   }
+
+//   .h2-accent {
+//     @include typo($ff-accent, 16px, 1.2, 600, $clr-body);
+//   }
+
+//   .h3-accent {
+//     @include typo($ff-accent, 14px, 1.3);
+//   }
+
+//   .body-accent {
+//     @include typo($ff-accent, 12px, 1.4, 600, $clr-body);
+//   }
+
+//   .link {
+//     @include typo($ff-primary, 14px, 1.4);
+//   }
+// }
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 85vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.align-center {
+  align-items: center;
+}
