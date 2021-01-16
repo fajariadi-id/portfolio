@@ -8,6 +8,27 @@
   color: $clr;
 }
 
-// @mixin sidenav {
+@mixin hr__width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
 
-// }
+@mixin icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $clr-white;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 50%;
+  color: $clr-white;
+  font-size: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: $transition;
+}
+
+@mixin shadow($x, $y, $p: 0px, $q: 0px, $r: 0px) {
+  box-shadow: $x $y 3px rgba($color: $clr-black, $alpha: 0.2),
+    $p $q $r rgba($color: $clr-black, $alpha: 0.2);
+}

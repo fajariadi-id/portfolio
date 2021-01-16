@@ -22,20 +22,30 @@ const Navbar = () => {
     const links = linksContainer.current;
     links.classList.toggle('show-link');
     const linksHeight = links.clientHeight;
-    linksHeight === 0
-      ? (links.style.height = '29vh')
-      : (links.style.height = 0);
+    if (linksHeight === 0) {
+      links.style.height = '29vh';
+      // document.getElementById('home').style.filter = 'blur(0)';
+      // document.getElementById('main').style.filter = 'blur(0)';
+    } else {
+      links.style.height = 0;
+      // document.getElementById('home').style.filter = 'blur(5px)';
+      // document.getElementById('main').style.filter = 'blur(5px)';
+    }
   };
 
   const nav = useRef();
   const handleScrollLink = (e) => {
     e.preventDefault();
 
-    const navHeight = nav.current.clientHeight - 40;
+    const navHeight =
+      nav.current.clientHeight > 80
+        ? nav.current.clientHeight - 40
+        : nav.current.clientHeight;
     const id = e.target.getAttribute('href').slice(1);
     const linkEl = document.getElementById(id);
 
     let position = linkEl.offsetTop - navHeight;
+
     window.scrollTo({
       top: position,
     });

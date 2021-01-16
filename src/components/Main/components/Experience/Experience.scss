@@ -1,0 +1,306 @@
+@import '../../../../assets/scss/variables';
+@import '../../../../assets/scss/mixin';
+
+.experience {
+  min-height: calc(100vh - 80px);
+  padding: 50px 0 0;
+
+  .header {
+    h1 {
+      margin-right: 30px;
+    }
+
+    hr {
+      @include hr__width-height(30vw, 5px);
+    }
+  }
+
+  .text {
+    width: 700px;
+    text-align: center;
+    margin: 50px auto 70px;
+  }
+
+  .skill__certificate {
+    .skills {
+      margin-right: 30px;
+
+      hr {
+        width: 50px;
+        margin-top: 10px;
+      }
+
+      .skill-container {
+        .icon-container {
+          margin: 20px 0 40px;
+          flex-wrap: wrap;
+
+          p.icon {
+            height: 60px;
+            width: 60px;
+          }
+
+          .icon {
+            @include icon;
+            cursor: unset;
+            font-size: 36px;
+            border-width: 3px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    .certificates {
+      position: relative;
+      height: 520px;
+      width: 705px;
+      overflow: hidden;
+
+      hr {
+        width: 50px;
+        margin-top: 10px;
+      }
+
+      .certificate-container {
+        margin-left: 50px;
+
+        .certificate {
+          position: relative;
+          width: fit-content;
+          margin-right: 5px;
+          transition: $transition 0.3s;
+          z-index: 1;
+
+          &:nth-of-type(odd) {
+            transform-origin: bottom left;
+          }
+
+          &:nth-of-type(even) {
+            transform-origin: bottom right;
+          }
+
+          &:hover {
+            transform: scale(1.2);
+            z-index: 2;
+            @include shadow(-5px, 0px, 5px, 0px, 3px);
+
+            > img {
+              border-radius: $radius $radius 0 0;
+            }
+
+            > .certificate-info {
+              visibility: visible;
+              @include shadow(-5px, 10px, 5px, 0px, 3px);
+            }
+          }
+
+          img {
+            width: 300px;
+            border-radius: $radius;
+            transition-delay: 0.3s;
+          }
+
+          .certificate-info {
+            background-color: $clr-main-dark;
+            padding: 10px;
+            border-radius: 0 0 $radius $radius;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transform: translateY(94%);
+            visibility: hidden;
+            transition-delay: 0.3s;
+
+            .title {
+              color: $clr-white;
+              font-size: 24px;
+            }
+
+            .platform {
+              display: inline-block;
+              font-size: 18px;
+              background-color: $clr-main-light;
+              padding: 5px 10px;
+              border-radius: $radius;
+              margin: 10px 0 30px;
+            }
+
+            .credential {
+              display: block;
+              color: $clr-body;
+              text-align: center;
+
+              &:hover {
+                color: $clr-white;
+              }
+            }
+          }
+        }
+      }
+
+      .slider {
+        border: none;
+        background-color: rgba($color: $clr-main-light, $alpha: 0.3);
+        height: 42%;
+        color: $clr-white;
+        font-size: 50px;
+        cursor: pointer;
+        transition: $transition;
+        position: absolute;
+        top: 15%;
+        z-index: 2;
+
+        &:hover {
+          color: $clr-accent;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &.prev {
+          left: 0;
+        }
+
+        &.next {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-ipadPro) {
+  .experience {
+    .skill__certificate {
+      align-items: center;
+      flex-direction: column;
+
+      .skills {
+        width: 705px;
+        margin: 0 0 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1370px) and (max-height: $breakpoint-ipadPro) {
+  .experience .certificate {
+    img {
+      width: 280px !important;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-ipad) and (max-height: $breakpoint-ipadPro) {
+  .experience {
+    .text {
+      width: 100%;
+    }
+    .skill__certificate {
+      .skills {
+        width: 100%;
+      }
+
+      .certificates {
+        width: 100%;
+
+        .certificate {
+          img {
+            width: 274px !important;
+          }
+        }
+
+        .slider {
+          top: 11%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-ipadPro) and (max-height: $breakpoint-ipad) {
+  .experience .certificate {
+    img {
+      width: 300px !important;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .experience {
+    .header {
+      flex-direction: column;
+      align-items: unset;
+    }
+
+    hr {
+      @include hr__width-height(30px !important, 7px !important);
+    }
+    .skill__certificate {
+      .certificates {
+        .certificate-container {
+          margin: 0;
+          padding: 20px 0 170px;
+          overflow-x: scroll;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          .certificate {
+            transform-origin: bottom center !important;
+
+            &:first-of-type {
+              transform-origin: bottom left !important;
+            }
+
+            &:last-of-type {
+              transform-origin: bottom right !important;
+            }
+
+            &:hover {
+              transform: scale(1.1);
+            }
+
+            .certificate-info {
+              .title {
+                font-size: 18px;
+              }
+
+              .platform {
+                font-size: 14px !important;
+              }
+            }
+          }
+        }
+
+        .slider {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  .experience .certificate {
+    &:hover {
+      transform: scale(1) !important;
+
+      > .certificate-info {
+        transform: translateY(94%) !important;
+        opacity: 1;
+      }
+    }
+
+    .certificate-info {
+      z-index: -1;
+      transform: translateY(70%) !important;
+      opacity: 0;
+      transition: $transition;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 @import '../../assets/scss/variables';
+@import '../../assets/scss/mixin';
 
 header {
+  transition: all 0.5s ease;
   .container {
     min-height: 100vh;
 
@@ -15,28 +17,10 @@ header {
     .name__sosmed {
       width: 100%;
       margin-right: 200px;
+      z-index: 1;
 
-      hr {
-        margin: 20px 0;
-        height: 10px;
-        width: 70px;
-        border: none;
-        background-color: $clr-accent;
-      }
       .icon-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid $clr-white;
-        width: fit-content;
-        padding: 10px;
-        border-radius: 50%;
-        color: $clr-white;
-        font-size: 18px;
-        margin-right: 20px;
-        cursor: pointer;
-        transition: $transition;
-
+        @include icon;
         &:hover {
           color: $clr-accent;
           border-color: $clr-accent;
@@ -125,6 +109,10 @@ header {
 
       .name__sosmed {
         margin: 10px 0;
+
+        hr {
+          margin: 10px 0 20px;
+        }
 
         .icon-container {
           display: none;

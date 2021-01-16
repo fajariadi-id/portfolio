@@ -1,27 +1,30 @@
 import React from 'react';
 import './Header.scss';
 import pic from '../../assets/img/profile-pic.png';
-import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { headerIcons } from '../../assets/data/data';
 
 const Header = () => {
   return (
     <header id='home'>
       <div className='container d-flex justify-content-between align-center'>
-        <img src={pic} alt='author picture' className='pic' />
+        <img src={pic} alt='pic' className='pic' />
 
         <div className='name__sosmed'>
           <h1>Fajar Riadi</h1>
           <hr />
           <div className='sosmed-container d-flex'>
-            <div className='icon-container'>
-              <FaInstagram />
-            </div>
-            <div className='icon-container'>
-              <FaLinkedinIn />
-            </div>
-            <div className='icon-container'>
-              <FaGithub />
-            </div>
+            {headerIcons.map((icon) => {
+              return (
+                <a
+                  href={icon.link}
+                  target='_blank'
+                  rel='noreferrer'
+                  key={icon.id}
+                >
+                  <div className='icon-container'>{<icon.name />}</div>
+                </a>
+              );
+            })}
           </div>
         </div>
 
@@ -34,7 +37,7 @@ const Header = () => {
             menyelesaikan studi di <span>Universitas Gunadarma</span> dengan
             jurusan <span>sistem komputer</span>. Saya memiliki cita-cita untuk
             menuju jenjang karir yang memungkinkan saya dapat menyalurkan
-            kreativitas dalam membuat software yang baik dan pengalaman yang
+            kreativitas dalam membangun software yang baik dan pengalaman yang
             menarik.
           </p>
         </div>

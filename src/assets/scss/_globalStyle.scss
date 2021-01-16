@@ -27,11 +27,11 @@ h2 {
 }
 
 .h2-accent {
-  @include typo($ff-accent, 24px, 1.2, 600, $clr-body);
+  @include typo($ff-accent, 36px, 1.2);
 }
 
 .h3-accent {
-  @include typo($ff-accent, 18px, 1.3);
+  @include typo($ff-accent, 24px, 1.3);
 }
 
 .body-accent {
@@ -58,11 +58,11 @@ h2 {
   }
 
   .h2-accent {
-    @include typo($ff-accent, 18px, 1.2, 600, $clr-body);
+    @include typo($ff-accent, 24px, 1.2);
   }
 
   .h3-accent {
-    @include typo($ff-accent, 16px, 1.3);
+    @include typo($ff-accent, 18px, 1.3);
   }
 
   .body-accent {
@@ -110,6 +110,14 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+hr {
+  margin: 20px 0;
+  height: 10px;
+  width: 70px;
+  border: none;
+  background-color: $clr-accent;
 }
 
 .container {

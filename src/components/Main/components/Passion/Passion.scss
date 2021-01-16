@@ -1,7 +1,89 @@
 @import '../../../../assets/scss/variables';
+@import '../../../../assets/scss/mixin';
 
 .passion {
-  min-height: 100vh;
+  min-height: fit-content;
   background-color: $clr-main-dark;
-  padding: 30px 0;
+  padding: 50px 0;
+
+  .container {
+    .header {
+      h1 {
+        margin-right: 30px;
+      }
+
+      hr {
+        @include hr__width-height(30vw, 5px);
+      }
+    }
+
+    .card-container {
+      margin-top: 50px;
+
+      .card {
+        width: 400px;
+
+        .icon {
+          background-color: $clr-accent;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          color: $clr-white;
+          font-size: 70px;
+        }
+
+        h2 {
+          margin: 20px 0;
+        }
+
+        &:nth-of-type(2) {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-ipadPro) {
+  .passion {
+    .card-container {
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-ipad) {
+  .passion {
+    .container {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+        .card {
+          margin: 50px 0;
+
+          .icon {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .passion {
+    .header {
+      flex-direction: column;
+      align-items: unset;
+
+      hr {
+        @include hr__width-height(30px !important, 7px !important);
+      }
+    }
+
+    .card {
+      width: 100% !important;
+    }
+  }
 }
