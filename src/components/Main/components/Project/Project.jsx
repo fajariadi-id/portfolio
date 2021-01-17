@@ -60,7 +60,7 @@ const Project = () => {
             <a
               href='https://fajariadi-id.github.io/netflix-clone/'
               target='_blank'
-              rel='norefferer'
+              rel='noreferrer'
               className='link-btn'
             >
               <h2>take a look</h2>
@@ -98,7 +98,7 @@ const Project = () => {
             <a
               href='https://fajariadi-id.github.io/joki-app/'
               target='_blank'
-              rel='norefferer'
+              rel='noreferrer'
               className='link-btn'
             >
               <h2>take a look</h2>
