@@ -38,6 +38,9 @@
 
 @media (max-width: $breakpoint-phone) {
   .contact {
+    hr {
+      @include hr__width-height(30px !important, 7px !important);
+    }
     p {
       width: 100% !important;
     }
