@@ -244,9 +244,6 @@
     min-height: 150vh;
     padding: 10px;
     .header {
-      h1 {
-      }
-
       hr {
         margin-top: 10px;
         @include hr__width-height(30px !important, 7px !important);

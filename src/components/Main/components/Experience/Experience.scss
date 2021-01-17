@@ -2,7 +2,7 @@
 @import '../../../../assets/scss/mixin';
 
 .experience {
-  min-height: calc(100vh - 80px);
+  min-height: fit-content;
   padding: 50px 0 0;
 
   .header {
