@@ -6,11 +6,11 @@ import Project from './components/Project/Project';
 
 const Main = () => {
   return (
-    <main id='main' style={{ transition: 'all .5s ease' }}>
+    <main>
       <Passion />
       <Experience />
-      {/* <Project />
-      <Contact /> */}
+      <Project />
+      <Contact />
     </main>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.scss';
 import pic from '../../assets/img/profile-pic.png';
-import { headerIcons } from '../../assets/data/data';
+import Sosmed from '../StatelessComponent/Sosmed/Sosmed';
 
 const Header = () => {
   return (
@@ -12,20 +12,7 @@ const Header = () => {
         <div className='name__sosmed'>
           <h1>Fajar Riadi</h1>
           <hr />
-          <div className='sosmed-container d-flex'>
-            {headerIcons.map((icon) => {
-              return (
-                <a
-                  href={icon.link}
-                  target='_blank'
-                  rel='noreferrer'
-                  key={icon.id}
-                >
-                  <div className='icon-container'>{<icon.name />}</div>
-                </a>
-              );
-            })}
-          </div>
+          <Sosmed />
         </div>
 
         <div className='description'>

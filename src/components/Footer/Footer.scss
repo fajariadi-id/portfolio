@@ -1,0 +1,43 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixin';
+
+footer {
+  border-top: 1px solid $clr-main-dark;
+  padding: 20px 0 10px;
+
+  .container {
+    text-align: center;
+
+    .icon {
+      @include icon;
+      border: none;
+      font-size: 36px;
+      margin: 10px auto 0;
+      transform: rotate(-90deg);
+      transition: $transition-500ms;
+
+      &:hover {
+        color: $clr-accent;
+
+        + span {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+
+    span {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 10px;
+      transform: translateX(-10px);
+      opacity: 0;
+      transition: $transition-500ms;
+    }
+
+    p {
+      color: $clr-white;
+      font-weight: 300;
+    }
+  }
+}

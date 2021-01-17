@@ -1,0 +1,45 @@
+@import '../../../../assets/scss/variables';
+@import '../../../../assets/scss/mixin';
+
+.contact {
+  min-height: fit-content;
+  padding: 80px 0;
+
+  .container {
+    flex-direction: column;
+    height: 100%;
+
+    p {
+      width: 650px;
+      text-align: center;
+      margin: 30px 0 50px;
+    }
+
+    .email-btn {
+      display: inline-block;
+      color: $clr-white;
+      border: 3px solid $clr-white;
+      padding: 10px 20px;
+      border-radius: $radius;
+      transition: $transition;
+
+      &:hover {
+        background-color: $clr-main-dark;
+        border-color: $clr-main-dark;
+        box-shadow: $shadow;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .contact {
+    p {
+      width: 100% !important;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixin';
+
+.margin {
+  margin-right: 10px !important;
+  margin-left: 10px;
+}
+
+.sosmed-container {
+  .icon-container {
+    @include icon;
+    &:hover {
+      color: $clr-accent;
+      border-color: $clr-accent;
+    }
+  }
+}
