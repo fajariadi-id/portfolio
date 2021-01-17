@@ -239,17 +239,6 @@
   }
 }
 
-@media (max-width: $breakpoint-ipadPro) and (max-height: $breakpoint-ipad) {
-  .project {
-    padding: 0;
-    .content {
-      .tech {
-        display: none;
-      }
-    }
-  }
-}
-
 @media (max-width: $breakpoint-phone) {
   .project {
     min-height: 150vh;
@@ -276,17 +265,6 @@
         &.right {
           background-position: center center;
         }
-      }
-    }
-  }
-}
-
-@media (max-height: 740px) {
-  .project {
-    padding: 10px 0;
-    .content {
-      .tech {
-        display: block;
       }
     }
   }
