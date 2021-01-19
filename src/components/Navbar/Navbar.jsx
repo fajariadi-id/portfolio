@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import './Navbar.scss';
 import logo from '../../assets/img/logo.png';
 import { FaBars } from 'react-icons/fa';
+import gsap from 'gsap';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
@@ -12,6 +13,16 @@ const Navbar = () => {
       window.pageYOffset > 120 ? setShowNav(true) : setShowNav(false);
     };
     window.addEventListener('scroll', scrollNav);
+
+    const timeline = gsap.timeline({ defaults: { duration: 1 } });
+    timeline
+      .from('.logo', { opacity: 0, scale: 0, ease: 'power3.out' })
+      .from(
+        '.link',
+        { opacity: 0, y: -20, stagger: 0.2, ease: 'power3.out' },
+        0.5
+      )
+      .from('.btn-open', { opacity: 0, scale: 0 }, 0.2);
 
     return () => {
       window.removeEventListener('scroll', scrollNav);

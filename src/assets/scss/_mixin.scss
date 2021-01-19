@@ -25,7 +25,6 @@
   font-size: 20px;
   margin-right: 20px;
   cursor: pointer;
-  transition: $transition;
 }
 
 @mixin shadow($x, $y, $p: 0px, $q: 0px, $r: 0px) {

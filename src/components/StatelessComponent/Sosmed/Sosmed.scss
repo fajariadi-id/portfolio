@@ -12,6 +12,7 @@
     &:hover {
       color: $clr-accent;
       border-color: $clr-accent;
+      transition: $transition;
     }
   }
 }

@@ -45,7 +45,6 @@
         color: $clr-white;
         font-size: 24px;
         cursor: pointer;
-        transition: $transition;
 
         &:focus {
           outline: none;
@@ -53,6 +52,7 @@
 
         &:hover {
           color: $clr-accent;
+          transition: $transition;
         }
       }
     }
@@ -162,10 +162,10 @@
               .link {
                 &:hover {
                   color: $clr-accent;
+                  transition: $transition;
                 }
                 margin: 0;
                 margin-left: 30px;
-                transition: $transition;
               }
             }
           }

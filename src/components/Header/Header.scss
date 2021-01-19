@@ -15,12 +15,14 @@ header {
     }
 
     .name__sosmed {
+      overflow: hidden;
       width: 100%;
       margin-right: 200px;
       z-index: 1;
     }
 
     .description {
+      overflow: hidden;
       z-index: 1;
       width: 100%;
       max-width: 580px;
