@@ -20,10 +20,10 @@ function App() {
     <Fragment>
       {loading ? (
         <div className='loading d-flex justify-content-center align-center'>
-          <PuffLoader color={'#ffc25c'} loading={loading} size={120} />
+          <PuffLoader color={'#ffc25c'} loading={loading} size={150} />
         </div>
       ) : (
-        <div className={`App ${!loading && 'show'}`}>
+        <div className='App'>
           <Navbar />
           <Header />
           <Main />
