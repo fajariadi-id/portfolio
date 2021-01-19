@@ -7,13 +7,14 @@ const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const scrollNav = () => {
       // 120 -> navbar height
       window.pageYOffset > 120 ? setShowNav(true) : setShowNav(false);
-    });
+    };
+    window.addEventListener('scroll', scrollNav);
 
     return () => {
-      window.removeEventListener('scroll');
+      window.removeEventListener('scroll', scrollNav);
     };
   }, []);
 
@@ -24,12 +25,8 @@ const Navbar = () => {
     const linksHeight = links.clientHeight;
     if (linksHeight === 0) {
       links.style.height = '29vh';
-      // document.getElementById('home').style.filter = 'blur(0)';
-      // document.getElementById('main').style.filter = 'blur(0)';
     } else {
       links.style.height = 0;
-      // document.getElementById('home').style.filter = 'blur(5px)';
-      // document.getElementById('main').style.filter = 'blur(5px)';
     }
   };
 

@@ -136,20 +136,20 @@
       justify-content: space-between;
 
       .nav-white {
-        transition-delay: 0;
+        transition-delay: 0 !important;
         margin-top: 0;
         background-color: transparent;
         box-shadow: none;
         overflow: visible;
 
         .nav-accent {
-          transition-delay: 0;
+          transition-delay: 0 !important;
           background-color: transparent;
           transform: translateY(0);
           height: 120px;
 
           .nav-main {
-            transition-delay: 0;
+            transition-delay: 0 !important;
             transform: translateY(0);
             height: 120px;
             background-color: transparent;

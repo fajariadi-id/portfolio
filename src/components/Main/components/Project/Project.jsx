@@ -19,8 +19,12 @@ const Project = () => {
     );
 
     return () => {
-      rightSide.removeEventListener('mouseleave');
-      rightSide.removeEventListener('mouseenter');
+      rightSide.removeEventListener('mouseleave', () =>
+        container.classList.add('hover-right')
+      );
+      rightSide.removeEventListener('mouseenter', () =>
+        container.classList.remove('hover-right')
+      );
     };
   }, []);
 
