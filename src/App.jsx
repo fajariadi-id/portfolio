@@ -23,7 +23,7 @@ function App() {
           <PuffLoader color={'#ffc25c'} loading={loading} size={120} />
         </div>
       ) : (
-        <div className='App'>
+        <div className={`App ${!loading && 'show'}`}>
           <Navbar />
           <Header />
           <Main />

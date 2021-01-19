@@ -8,4 +8,10 @@
   height: 100vh;
 }
 
+.App {
+  visibility: hidden;
+}
 
+.App.show {
+  visibility: visible;
+}
