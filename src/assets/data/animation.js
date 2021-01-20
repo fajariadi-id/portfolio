@@ -9,7 +9,7 @@ export const h1Animation = (trigger, x, y) => {
       trigger: trigger,
       start: 'top bottom-=150',
       // markers: true,
-      toggleActions: 'play none none reverse',
+      // toggleActions: 'play none none reverse',
     },
     defaults: { duration: 1, opacity: 0, ease: 'power3.out' },
   });
@@ -51,7 +51,7 @@ export const gsapFrom = (
     scrollTrigger: {
       trigger: trigger,
       start: 'top bottom-=150',
-      toggleActions: 'play none none reverse',
+      // toggleActions: 'play none none reverse',
     },
   });
 };

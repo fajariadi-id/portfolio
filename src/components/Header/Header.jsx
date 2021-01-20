@@ -24,12 +24,7 @@ const Header = () => {
         { y: 100, opacity: 0, stagger: 0.2, ease: 'power3.out' },
         '<.2'
       )
-      // .from(
-      //   'header .body-accent',
-      //   { y: -100, opacity: 0, ease: 'power3.out' },
-      //   0.2
-      // )
-      // .from('header .job', { x: -100, opacity: 0, ease: 'power3.out' }, 0.5)
+
       .from('header .text', { y: 100, opacity: 0, ease: 'power3.out' }, 1);
   }, []);
 
