@@ -6,6 +6,7 @@
   padding: 50px 0 0;
 
   .header {
+    overflow: hidden;
     h1 {
       margin-right: 30px;
     }
@@ -16,13 +17,15 @@
   }
 
   .text {
+    overflow: hidden;
     width: 700px;
     text-align: center;
-    margin: 50px auto 70px;
+    margin: 50px auto;
   }
 
   .skill__certificate {
     .skills {
+      overflow: hidden;
       margin-right: 30px;
 
       hr {
@@ -147,13 +150,13 @@
         color: $clr-white;
         font-size: 50px;
         cursor: pointer;
-        transition: $transition;
         position: absolute;
         top: 15%;
         z-index: 2;
 
         &:hover {
           color: $clr-accent;
+          transition: $transition;
         }
 
         &:focus {
@@ -180,7 +183,7 @@
 
       .skills {
         width: 705px;
-        margin: 0 0 20px;
+        margin: 0 0 10px;
       }
     }
   }
@@ -198,6 +201,7 @@
   .experience {
     .text {
       width: 100%;
+      margin: 20px auto 30px;
     }
     .skill__certificate {
       .skills {

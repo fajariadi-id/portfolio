@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Passion.scss';
 import { cards } from '../../../../assets/data/data';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { h1Animation } from '../../../../assets/data/animation';
 
 const Passion = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    h1Animation('.passion', -100, -100);
+
+    const cards = document.querySelectorAll('.passion .card');
+    cards.forEach((card) => {
+      gsap.from(card, {
+        duration: 2,
+        opacity: 0,
+        y: 100,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: card,
+          start: 'top bottom-=100',
+        },
+      });
+    });
+  }, []);
+
   return (
     <article className='passion' id='passion'>
       <div className='container'>

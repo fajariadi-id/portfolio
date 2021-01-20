@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { FaRegCheckCircle, FaRegTimesCircle } from 'react-icons/fa';
 import './Project.scss';
+import { h1Animation, gsapFrom } from '../../../../assets/data/animation';
 
 const Project = () => {
   const right = useRef();
@@ -17,6 +18,12 @@ const Project = () => {
     rightSide.addEventListener('mouseleave', () =>
       container.classList.remove('hover-right')
     );
+
+    // *::: GSAP :::
+    h1Animation('.project .header', -100, -100);
+
+    gsapFrom('.split.left', -100, 0, '.project .header', 1, null, 0.2);
+    gsapFrom('.split.right', 100, 0, '.split.right', 1, null, 0.2);
 
     return () => {
       rightSide.removeEventListener('mouseleave', () =>

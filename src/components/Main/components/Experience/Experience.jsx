@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Experience.scss';
 import { skills, certificates } from '../../../../assets/data/data';
 import {
@@ -7,6 +7,11 @@ import {
   FaExternalLinkAlt,
   FaFigma,
 } from 'react-icons/fa';
+import {
+  h1Animation,
+  h2Animation,
+  gsapFrom,
+} from '../../../../assets/data/animation';
 
 const Experience = () => {
   const [activeSlider, setActiveSlider] = useState(0);
@@ -22,6 +27,18 @@ const Experience = () => {
     certif.style.left = `-${certifWidth * activeSlider}px`;
   });
 
+  useEffect(() => {
+    h1Animation('.experience .header', -100, -100);
+
+    h2Animation('.skills', -100, -100);
+    h2Animation('.certificates', -100, -100);
+
+    gsapFrom('.experience .text p', 0, 100, '.experience .text');
+    gsapFrom('.skills h3', -100, 0, '.skills', 1);
+    gsapFrom('.skills .icon', 10, 0, '.skills', 0.5, 0.2);
+    gsapFrom(['.certificate-container', '.slider'], 0, 50, '.certificates', 1);
+  }, []);
+
   return (
     <article className='experience' id='experience'>
       <div className='container'>
@@ -30,11 +47,13 @@ const Experience = () => {
           <hr />
         </div>
 
-        <p className='text'>
-          Saya telah melakukan web development selama 3 bulan setelah saya lulus
-          kuliah, dan saya selalu ingin belajar lebih banyak mengenai industri
-          ini.
-        </p>
+        <div className='text'>
+          <p>
+            Saya telah melakukan web development selama 3 bulan setelah saya
+            lulus kuliah, dan saya selalu ingin belajar lebih banyak mengenai
+            industri ini.
+          </p>
+        </div>
 
         <div className='skill__certificate d-flex'>
           <div className='skills'>
