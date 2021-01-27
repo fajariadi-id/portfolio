@@ -16,7 +16,9 @@ import {
 const Experience = () => {
   const [activeSlider, setActiveSlider] = useState(0);
   const handleNext = () =>
-    setActiveSlider(activeSlider === 2 ? 0 : activeSlider + 1);
+    setActiveSlider(
+      activeSlider === certificates.length / 2 - 1 ? 0 : activeSlider + 1
+    );
 
   const handlePrev = () =>
     setActiveSlider(activeSlider === 0 ? 2 : activeSlider - 1);

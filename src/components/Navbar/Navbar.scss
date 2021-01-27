@@ -11,9 +11,10 @@
   transition: $transition-500ms;
 
   &.nav-bg {
-    background-color: $clr-main-light;
+    background-color: rgba($color: $clr-main-light, $alpha: 0.9);
     transition: $transition-500ms;
     box-shadow: $shadow;
+    backdrop-filter: blur(10px);
 
     .container {
       height: 80px;

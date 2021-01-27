@@ -11,6 +11,7 @@ import {
   FaJs,
   FaSass,
   FaReact,
+  FaNodeJs,
 } from 'react-icons/fa';
 
 import dicoding from '../img/dicoding.png';
@@ -19,6 +20,8 @@ import htmlCss from '../img/html-css.png';
 import js from '../img/js.png';
 import react from '../img/react.png';
 import sass from '../img/sass.png';
+import nodejs from '../img/node-js.png';
+import pathWebDev from '../img/path-webDev.png';
 
 export const headerIcons = [
   {
@@ -87,6 +90,10 @@ export const skills = [
     id: 6,
     name: FaReact,
   },
+  {
+    id: 7,
+    name: FaNodeJs,
+  },
 ];
 
 export const certificates = [
@@ -106,30 +113,44 @@ export const certificates = [
   },
   {
     id: 3,
-    img: htmlCss,
-    title: 'Kursus HTML & CSS',
+    img: pathWebDev,
+    title: 'Path Pengembangan Web(Node.js)',
     platform: 'Progate',
-    credential: 'http://progate.com/course_certificate/efc47308qlu1et',
+    credential: 'http://progate.com/course_certificate/04f488faqnbb7l',
   },
   {
     id: 4,
-    img: js,
-    title: 'Kursus JavaScript',
+    img: nodejs,
+    title: 'Kursus Node.Js',
     platform: 'Progate',
-    credential: 'http://progate.com/course_certificate/ab0cd7daqlx5uj',
+    credential: 'http://progate.com/course_certificate/77e036b5qnavwr',
   },
   {
     id: 5,
+    img: sass,
+    title: 'Kursus Sass',
+    platform: 'Progate',
+    credential: 'http://progate.com/course_certificate/928329f9qmtrq4',
+  },
+  {
+    id: 6,
     img: react,
     title: 'Kursus React',
     platform: 'Progate',
     credential: 'http://progate.com/course_certificate/7a82f545qlxgcb',
   },
   {
-    id: 6,
-    img: sass,
-    title: 'Kursus Sass',
+    id: 7,
+    img: js,
+    title: 'Kursus JavaScript',
     platform: 'Progate',
-    credential: 'http://progate.com/course_certificate/928329f9qmtrq4',
+    credential: 'http://progate.com/course_certificate/ab0cd7daqlx5uj',
+  },
+  {
+    id: 8,
+    img: htmlCss,
+    title: 'Kursus HTML & CSS',
+    platform: 'Progate',
+    credential: 'http://progate.com/course_certificate/efc47308qlu1et',
   },
 ];

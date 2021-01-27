@@ -67,7 +67,7 @@ const Project = () => {
               </div>
             </div>
 
-            <p className='h3-accent'>open in browser for better experience</p>
+            <p className='h3-accent'>open in desktop for better experience</p>
             <a
               href='https://fajariadi-id.github.io/netflix-clone/'
               target='_blank'
