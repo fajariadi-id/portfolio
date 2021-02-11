@@ -8,15 +8,25 @@ const Header = () => {
   useEffect(() => {
     const timeline = gsap.timeline({ defaults: { duration: 1 } });
     timeline
-      .from('header .pic', { y: 50, opacity: 0, ease: 'power3.out' })
+      .from('header .pic', {
+        y: 50,
+        opacity: 0,
+        ease: 'power3.out',
+        delay: 1.5,
+      })
       .from(
         ['header h1', 'header .body-accent'],
-        { y: -100, opacity: 0, ease: 'power3.out' },
+        {
+          y: -100,
+          opacity: 0,
+          ease: 'power3.out',
+          delay: 1.5,
+        },
         0.2
       )
       .from(
         ['header hr', 'header .job'],
-        { x: -100, opacity: 0, ease: 'power3.out' },
+        { x: -100, opacity: 0, ease: 'power3.out', delay: 1.5 },
         0.8
       )
       .from(
@@ -25,7 +35,11 @@ const Header = () => {
         '<.2'
       )
 
-      .from('header .text', { y: 100, opacity: 0, ease: 'power3.out' }, 1);
+      .from(
+        'header .text',
+        { y: 100, opacity: 0, ease: 'power3.out', delay: 1.5 },
+        1
+      );
   }, []);
 
   return (
