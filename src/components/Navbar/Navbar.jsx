@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useLayoutEffect } from 'react';
 import './Navbar.scss';
 import logo from '../../assets/img/logo.png';
 import { FaBars } from 'react-icons/fa';
@@ -14,6 +14,12 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', scrollNav);
 
+    return () => {
+      window.removeEventListener('scroll', scrollNav);
+    };
+  }, []);
+
+  useLayoutEffect(() => {
     const timeline = gsap.timeline({ defaults: { duration: 1 } });
     timeline
       .from('.logo', { opacity: 0, scale: 0, ease: 'power3.out' })
@@ -23,10 +29,6 @@ const Navbar = () => {
         0.5
       )
       .from('.btn-open', { opacity: 0, scale: 0 }, 0.2);
-
-    return () => {
-      window.removeEventListener('scroll', scrollNav);
-    };
   }, []);
 
   const linksContainer = useRef();

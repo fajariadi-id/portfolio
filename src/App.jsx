@@ -15,8 +15,9 @@ function App() {
       setLoading(false);
     }, 5000);
   }, []);
+
   return (
-    <Fragment>
+    <>
       {loading ? (
         <div className='loading d-flex justify-content-center align-center'>
           <PuffLoader color={'#ffc25c'} loading={loading} size={150} />
@@ -29,7 +30,7 @@ function App() {
           <Footer />
         </div>
       )}
-    </Fragment>
+    </>
   );
 }
 

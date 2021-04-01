@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import './Header.scss';
 import pic from '../../assets/img/profile-pic.png';
 import Sosmed from '../StatelessComponent/Sosmed/Sosmed';
 import gsap from 'gsap';
 
 const Header = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const timeline = gsap.timeline({ defaults: { duration: 1 } });
     timeline
       .from('header .pic', {
@@ -57,13 +57,20 @@ const Header = () => {
           <p className='body-accent'>- Introduction</p>
           <h2 className='job'>Front-End Web Developer Enthusiast.</h2>
           <p className='text'>
-            Saya adalah seorang web developer dengan passion pada bidang
+            I'm a web developer with a passion for front-end development and
+            design. I've completed a bachelor's degree of computer science at{' '}
+            <span>Gunadarma University</span> majoring in{' '}
+            <span>computer systems</span>. Currently, I'm learning at Coding.id
+            pursuing certification of training in Advanced Front End Class. I
+            aspire toward a career that will allow me to channel my creativity
+            through crafting beautiful software and engaging experiences.
+            {/* Saya adalah seorang web developer dengan passion pada bidang
             front-end development dan design. Saat ini saya baru saja
             menyelesaikan studi di <span>Universitas Gunadarma</span> dengan
             jurusan <span>sistem komputer</span>. Saya memiliki cita-cita untuk
             menuju jenjang karir yang memungkinkan saya dapat menyalurkan
             kreativitas dalam membangun software yang baik dan pengalaman yang
-            menarik.
+            menarik. */}
           </p>
         </div>
       </div>
