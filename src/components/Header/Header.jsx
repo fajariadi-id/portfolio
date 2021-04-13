@@ -64,13 +64,6 @@ const Header = () => {
             pursuing certification of training in Advanced Front End Class. I
             aspire toward a career that will allow me to channel my creativity
             through crafting beautiful software and engaging experiences.
-            {/* Saya adalah seorang web developer dengan passion pada bidang
-            front-end development dan design. Saat ini saya baru saja
-            menyelesaikan studi di <span>Universitas Gunadarma</span> dengan
-            jurusan <span>sistem komputer</span>. Saya memiliki cita-cita untuk
-            menuju jenjang karir yang memungkinkan saya dapat menyalurkan
-            kreativitas dalam membangun software yang baik dan pengalaman yang
-            menarik. */}
           </p>
         </div>
       </div>
