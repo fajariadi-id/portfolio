@@ -52,8 +52,10 @@ const Project = () => {
             <h2 className='h2-accent'>Netflix Clone</h2>
             <div className='description d-flex align-center'>
               <p>
-                Sebuah website Netflix Clone sederhana yang dibangun menggunakan
-                React dengan fitur movie-trailer.
+                A simple Netflix Clone.
+                <br />
+                My best practice of implementing React and Axios HTTP Request to
+                integrated with TMDB API.
               </p>
 
               <div className='tech '>
@@ -91,9 +93,11 @@ const Project = () => {
             </h2>
             <div className='description d-flex align-center'>
               <p>
-                Eksplorasi design landing page sederhana dengan ide untuk
-                membuka jasa joki yang diimplementasikan menjadi sebuah website
-                yang dibangun menggunakan HTML/CSS, Vanilla JavaScript
+                Exploration of a simple landing page design with the idea of
+                task completion service.
+                <br />
+                My best practice of building a responsive website that
+                implementing HTML, CSS, and Vanilla JavaScript.
               </p>
 
               <div className='tech '>

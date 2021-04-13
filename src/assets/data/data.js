@@ -47,21 +47,21 @@ export const cards = [
     icon: FaPencilRuler,
     title: '- Design',
     text:
-      'Design bukan hanya sekedar tampilan yang nyaman untuk dilihat. Design juga mencakup fungsionalitas serta pengalaman pengguna secara keseluruhan. Saya berusaha untuk membangun UI/UX yang dapat dinikmati orang disemua perangkat digital.',
+      "Design isn't only about how the product should look. Design is also about how the product should work to support the overall user experience. I strive to design interfaces and experiences that people can enjoy on all digital mediums.",
   },
   {
     id: 2,
     icon: FaCode,
     title: '- Code',
     text:
-      'Dengan dasar ilmu komputer yang saya pelajari, saya sangat menyukai design dan web development. Saat saya tumbuh sebagai seorang developer, saya berharap dapat menulis clean code, penulisan kode yang mudah dibaca dan dipahami oleh developer lain dan dapat digunakan untuk membangun software yang baik.',
+      "With a fundamental in computer science that I've learned, I'm passionate about web development and design. As I grow as a developer, I hope to write clean, readable code that can be used by others and leveraged to create beautiful software.",
   },
   {
     id: 3,
     icon: FaRegLightbulb,
     title: '- Involvement',
     text:
-      'Saat ini saya aktif mengikuti webinar dan kursus online untuk mempertajam serta memperkaya pengetahuan saya mengenai web development. Sebelumnya, ketika menjadi mahasiswa saya aktif sebagai asisten laboratorium elektronika dasar sebagai tenaga pengajar.',
+      "At Coding.id, I've been studying for 1 month and have passed stage 1 screening with algorithm, OOP, and MySQL tests. Previously, I've been involved with the ELKOM organization as a laboratory assistant at Gunadarma.",
   },
 ];
 

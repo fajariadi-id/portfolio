@@ -20,10 +20,9 @@ const Contact = () => {
 
         <div className='text'>
           <p>
-            Saat ini saya sedang aktif mencari peluang bekerja untuk posisi
-            Junior Front-end Web Developer. Bila ingin bekerja sama atau sekedar
-            berbagi ide untuk membangun suatu project, feel free to send me a
-            message!
+            Have a sweet project in mind or just want to say hi?
+            <br />
+            Feel free to send me a message!
           </p>
         </div>
 

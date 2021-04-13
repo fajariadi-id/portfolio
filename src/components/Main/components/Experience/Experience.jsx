@@ -51,9 +51,8 @@ const Experience = () => {
 
         <div className='text'>
           <p>
-            Saya telah melakukan web development selama 3 bulan setelah saya
-            lulus kuliah, dan saya selalu ingin belajar lebih banyak mengenai
-            industri ini.
+            I’ve been doing web development after graduating from college, and
+            I’ve always eager to learn more about the industry.
           </p>
         </div>
 
