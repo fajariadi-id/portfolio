@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import './Header.scss';
 import pic from '../../assets/img/profile-pic.png';
 import Sosmed from '../StatelessComponent/Sosmed/Sosmed';
